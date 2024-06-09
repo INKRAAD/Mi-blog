@@ -97,7 +97,7 @@ body {
   }
   .inline_block {
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
   /*Cierre de config Inicio/titulo*/
   /*Para telefono*/
