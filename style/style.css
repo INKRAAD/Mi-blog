@@ -98,6 +98,7 @@ body {
   .inline_block {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   /*Cierre de config Inicio/titulo*/
   /*Para telefono*/
