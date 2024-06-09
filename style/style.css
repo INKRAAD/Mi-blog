@@ -1,4 +1,4 @@
-#barmenu {
+.barmenu {
     display: inline-block;
     padding: 12px 24px;
     border: 1px solid #4f4f4f;
@@ -12,7 +12,7 @@
     z-index: 1;
   }
   
-  #barmenu:before {
+  .barmenu:before {
     content: "";
     position: absolute;
     left: 50%;
@@ -27,7 +27,7 @@
     z-index: -1;
   }
   
-  #barmenu:after {
+  .barmenu:after {
     content: "";
     position: absolute;
     left: 55%;
@@ -42,18 +42,18 @@
     z-index: -1;
   }
   
-  #barmenu:hover {
+  .barmenu:hover {
     color: #ffffff;
     border: 1px solid #39bda7;
   }
   
-  #barmenu:hover:before {
+  .barmenu:hover:before {
     top: -35%;
     background-color: #39bda7;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
   }
   
-  #barmenu:hover:after {
+  .barmenu:hover:after {
     top: -45%;
     background-color: #39bda7;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
