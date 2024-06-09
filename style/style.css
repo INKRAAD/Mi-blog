@@ -6,12 +6,12 @@
 .colorblack {
   color: black;
 }
-.logo{
+.logo {
   height: 200px;
   width: 200px;
 }
 h1 {
-  justify-content: flex-end;
+  justify-content: center;
 }
 body {
   background-image: url(../img/fondo_web.jpg);
@@ -21,7 +21,7 @@ body {
   position: relative;
   text-align: center;
   color: white;
-  margin-left: 30px;
+  margin-left: 15px;
   justify-content: center;
 }
 .barmenu {
