@@ -23,6 +23,7 @@ body {
   color: white;
   margin-left: 15px;
   justify-content: center;
+  float: right;
 }
 .barmenu {
     display: inline-block;
