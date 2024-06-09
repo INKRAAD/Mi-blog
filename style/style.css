@@ -89,4 +89,9 @@ body {
     width: 500px;
     align-items: center;
   }
-  @media (min-width: 300px) and (max-width: 800px)
+  @media (min-width: 300px) and (max-width: 800px){
+
+  }
+  .inline_block {
+    display: block;
+  }
