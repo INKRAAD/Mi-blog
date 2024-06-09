@@ -95,6 +95,9 @@ body {
     width: 500px;
     align-items: center;
   }
+  img{
+    align-items: center;
+  }
   /*Cierre de config Inicio/titulo*/
   /*Para telefono*/
   @media (min-width: 300px) and (max-width: 800px){
