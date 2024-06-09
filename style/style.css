@@ -1,5 +1,7 @@
 
-
+#saludoinicial {
+  color: white;
+}
 body {
   background-image: url(../img/fondo_web.jpg);
 }
@@ -7,6 +9,9 @@ body {
   text-decoration: none;
   position: relative;
   text-align: center;
+  color: white;
+  margin-left: 30px;
+  justify-content: center;
 }
 .barmenu {
     display: inline-block;
