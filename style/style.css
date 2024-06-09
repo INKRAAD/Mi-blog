@@ -95,14 +95,12 @@ body {
     width: 500px;
     align-items: center;
   }
-  div {
-    align-items: center;
+  .inline_block {
+    display: flex;
+    justify-content: center;
   }
   /*Cierre de config Inicio/titulo*/
   /*Para telefono*/
   @media (min-width: 300px) and (max-width: 800px){
 
-  }
-  .inline_block {
-    display: block;
   }
