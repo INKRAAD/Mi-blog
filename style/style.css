@@ -1,10 +1,12 @@
 
+
 body {
   background-image: url(../img/fondo_web.jpg);
 }
 .barmenu {
   text-decoration: none;
   position: relative;
+  text-align: center;
 }
 .barmenu {
     display: inline-block;
@@ -16,7 +18,7 @@ body {
     overflow: hidden;
     font-size: 19px;
     cursor: pointer;
-    color: black;
+    color: white;
     z-index: 1;
   }
   
