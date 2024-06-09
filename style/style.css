@@ -96,7 +96,7 @@ body {
     align-items: center;
   }
   .inline_block {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
   }
