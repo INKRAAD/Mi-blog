@@ -96,9 +96,7 @@ body {
     align-items: center;
   }
   .inline_block {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
   }
   /*Cierre de config Inicio/titulo*/
   /*Para telefono*/
