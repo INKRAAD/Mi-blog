@@ -6,8 +6,8 @@
   color: black;
 }
 .logo {
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
 }
 h1 {
   justify-content: center;
@@ -89,3 +89,4 @@ body {
     width: 500px;
     align-items: center;
   }
+  @media (min-width: 300px) and (max-width: 800px)
