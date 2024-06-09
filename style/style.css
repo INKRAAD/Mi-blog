@@ -1,6 +1,9 @@
 
-#saludoinicial {
+.colorwhite {
   color: white;
+}
+.colorblack {
+  color: black;
 }
 body {
   background-image: url(../img/fondo_web.jpg);
