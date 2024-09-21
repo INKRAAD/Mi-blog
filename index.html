@@ -3,30 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INKRAADMMAX</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Perfil de Programador - Juan Pérez</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo_inkraadmmax.png" type="image/x-icon">
+    <script type="text/script" src="js/script.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="enlaces-container">
+            <h1>Sebastian Ignacio</h1>
             <ul>
-                <li><a class="boton-tech" href="#inicio">INICIO</a></li><li><a class="boton-tech" href="#trayectoria">TRAYECTORIA</a></li><li><a class="boton-tech" href="#estudios">ESTUDIOS</a></li><li><a class="boton-tech" href="#novedades">NOVEDADES</a></li><li><a class="boton-tech" href="#redes">MIS REDES</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#conocimientos">Conocimientos</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="inicio" class="bienvenida">
-            <img class="logo" src="img/logo_inkraadmmax.png" alt="Logo de INKRAADMMAX">
-            <h1>Hola, soy INKRAAD MMAX</h1>
-            <h2>¡Bienvenidos a mi blog personal!</h2>
-            <p>Hola a todos y bienvenidos a mi blog personal. Soy INKRAAD MMAX, un apasionado por la tecnología, desarrollo web y diseño 3D. En este espacio, pretendo compartir con ustedes mi historia, mis experiencias y mis avances en el apasionante camino de la adquisición de conocimientos.</p>
+            <div class="imagen-perfil">
+                {{ edit_1 }} <!-- Espacio para imagen de perfil -->
+            </div>
+            <h2>Hola, soy Sebastian Ignacio</h2>
+            <p>Soy un programador altamente calificado con experiencia en diversas tecnologías...</p>
+        </section>
+
+        <section id="conocimientos">
+            <h2>Conocimientos</h2>
+            <ul>
+                <li>Python, Java, JavaScript, C++</li>
+                <li>Django, React, Angular</li>
+                <li>MySQL, MongoDB</li>
+                <li>Git, Docker, Jenkins</li>
+            </ul>
+        </section>
+
+        <section id="estudios">
+            <h2>Estudios</h2>
+            <p>Graduado en Ingeniería en Sistemas de la Universidad Catolica del Norte</p>
+            <div class="imagen-estudios">
+                {{ edit_2 }} <!-- Espacio para imagen de estudios -->
+            </div>
+        </section>
+
+        <section id="experiencias">
+            <h2>Experiencias</h2>
+            <ul>
+                <li>Desarrollador en Tech Innovations (2015 - presente)</li>
+                <li>Ingeniero de Software en Global Solutions (2012 - 2015)</li>
+            </ul>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            <ul>
+                <li>App de Salud</li>
+                <li>Plataforma de E-learning</li>
+            </ul>
+        </section>
+
+        <section id="certificaciones">
+            <h2>Certificaciones</h2>
+            <ul>
+                <li>Certified Scrum Master</li>
+                <li>Microsoft Certified: Azure Developer Associate</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de mi correo electrónico: inkraadm@gmail.com</p>
         </section>
     </main>
 
     <footer>
-        <!-- Aquí puedes agregar el contenido del pie de página -->
+        <p>&copy; 2024 Sebastian Ignacio. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
