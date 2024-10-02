@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡ALERTA DE SEGURIDAD!</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 10%;
+            animation: flicker 1.5s infinite alternate;
+            overflow: hidden;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        @keyframes shake {
+            0% { transform: translate(0); }
+            25% { transform: translate(-5px, 0); }
+            50% { transform: translate(5px, 0); }
+            75% { transform: translate(-5px, 0); }
+            100% { transform: translate(0); }
+        }
+        .warning {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 0 0 20px red, 0 0 30px darkred;
+            animation: shake 0.5s infinite;
+        }
+        .details {
+            font-size: 24px;
+            margin: 10px 0;
+            text-shadow: 0 0 10px red;
+            animation: flicker 2s infinite alternate;
+        }
+        .code {
+            font-size: 20px;
+            color: lime;
+            background-color: black;
+            padding: 10px;
+            border: 1px solid lime;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        .footer {
+            font-size: 18px;
+            color: white;
+            margin-top: 20px;
+            text-shadow: 0 0 10px white;
+        }
+        .ghost {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            color: rgba(255, 255, 255, 0.1);
+            animation: fade 3s infinite;
+        }
+        @keyframes fade {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .blood {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.app.goo.gl/hK3LmVnmVy1BTAxW7') repeat;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        .hack-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            background-color: red;
+            border: none;
+            cursor: pointer;
+            text-shadow: 0 0 10px black;
+            transition: background-color 0.3s;
+        }
+        .hack-button:hover {
+            background-color: darkred;
+        }
+        .side-text {
+            position: absolute;
+            top: 20%;
+            width: 200px;
+            color: lime;
+            font-size: 18px;
+            text-align: left;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            right: 0;
+        }
+        .fake-log {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: lime;
+            font-size: 16px;
+            text-align: center;
+            width: 80%;
+            animation: fade 5s infinite;
+        }
+    </style>
+    <script>
+        function openAlertWindows() {
+            for (let i = 0; i < 5; i++) { // Cambia el número para más o menos ventanas
+                const newWindow = window.open("", "_blank");
+                newWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>¡ALERTA DE HACKEO!</title>
+                        <style>
+                            body {
+                                background-color: black;
+                                color: red;
+                                text-align: center;
+                                font-family: 'Courier New', Courier, monospace;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>¡ALERTA DE HACKEO!</h1>
+                        <p>Se ha detectado actividad sospechosa en tu sistema.</p>
+                        <p>Dirección IP: <span style="color: lime;">192.168.1.1</span></p>
+                        <p>Ubicación: <span style="color: lime;">Ciudad Desconocida</span></p>
+                        <p>Contacta a soporte inmediato.</p>
+                    </body>
+                    </html>
+                `);
+            }
+        }
+
+        function detectDevice() {
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                document.querySelector('.mobile-content').style.display = 'block';
+            } else {
+                document.querySelector('.desktop-content').style.display = 'block';
+            }
+        }
+
+        function redirectToHackPage() {
+            window.location.href = "hackeado.html"; // Cambia esto a la URL de la página de hackeo
+        }
+    </script>
+</head>
+<body>
+    <div class="blood"></div>
+    <h1 class="warning">¡ALERTA DE HACKEO!</h1>
+    <p class="details">Se ha detectado actividad sospechosa en tu sistema.</p>
+    <p class="details">Dirección IP: <span class="code">192.168.1.1</span></p>
+    <p class="details">Ubicación: <span class="code">Ciudad Desconocida</span></p>
+    <p class="details">Presiona F5 para intentar recuperar el control.</p>
+    <p class="details">Si no puedes recuperar el control, contacta a soporte técnico.</p>
+    <p class="details">No apagues tu dispositivo.</p>
+    <button class="hack-button" onclick="redirectToHackPage()">¡No puedes restablecer tu dispositivo!</button>
+    <div class="ghost">👻</div>
+
+    <!-- Contenido para dispositivos móviles -->
+    <div class="mobile-content" style="display: none;">
+        <h2>¡Estás en un dispositivo móvil!</h2>
+        <p>La experiencia puede ser diferente.</p>
+    </div>
+
+    <!-- Contenido para computadoras de escritorio -->
+    <div class="desktop-content" style="display: none;">
+        <h2>¡Estás en una computadora de escritorio!</h2>
+        <p>Disfruta de la experiencia completa.</p>
+    </div>
+
+    <!-- Texto falso a los lados -->
+    <div class="side-text left">
+        <p>Robando información...</p>
+        <p>Accediendo a contraseñas...</p>
+        <p>Recopilando datos personales...</p>
+        <p>Enviando información a servidores...</p>
+        <p>Conectando a base de datos...</p>
+        <p>Descargando archivos...</p>
+    </div>
+    <div class="side-text right">
+        <p>Robando información...</p>
+        <p>Accediendo a contraseñas...</p>
+        <p>Recopilando datos personales...</p>
+        <p>Enviando información a servidores...</p>
+        <p>Conectando a base de datos...</p>
+        <p>Descargando archivos...</p>
+    </div>
+
+    <!-- Mensaje de log falso -->
+    <div class="fake-log">
+        <p>Log: Conexión establecida con el servidor remoto...</p>
+        <p>Log: Información de usuario recopilada...</p>
+        <p>Log: Enviando datos a la nube...</p>
+    </div>
+    <script>
+        window.onload = function() {
+            detectDevice(); // Detecta el dispositivo al cargar la página
+            setTimeout(function() {
+                alert("¡ALERTA! Tu computadora ha sido hackeada. Contacta a soporte inmediato.");
+                alert("Estás siendo víctima de un ciberataque. ¡Actúa rápido!"); // Nueva alerta de ciberataque
+                openAlertWindows(); // Llama a la función para abrir ventanas emergentes
+            }, 3000);
+        };
+
+    </script>
+</body>
+</html>
